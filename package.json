@@ -57,7 +57,10 @@
     "hygiene": "node --max_old_space_size=4095 ./node_modules/gulp/bin/gulp.js hygiene",
     "core-ci": "node --max_old_space_size=4095 ./node_modules/gulp/bin/gulp.js core-ci",
     "extensions-ci": "node --max_old_space_size=4095 ./node_modules/gulp/bin/gulp.js extensions-ci",
-    "webview-generate-csp-hash": "npx github:apaatsio/csp-hash-from-html csp-hash ./src/vs/workbench/contrib/webview/browser/pre/index.html"
+    "webview-generate-csp-hash": "npx github:apaatsio/csp-hash-from-html csp-hash ./src/vs/workbench/contrib/webview/browser/pre/index.html",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "dependencies": {
     "@microsoft/1ds-core-js": "^3.2.2",
@@ -97,6 +100,7 @@
   },
   "devDependencies": {
     "7zip": "0.0.6",
+    "@electron-forge/cli": "^6.0.0-beta.65",
     "@playwright/test": "1.21.0",
     "@types/cookie": "^0.3.3",
     "@types/copy-webpack-plugin": "^6.0.3",

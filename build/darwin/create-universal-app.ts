@@ -10,6 +10,8 @@ import * as path from 'path';
 import * as product from '../../product.json';
 
 async function main() {
+	console.log('\n\n\n\n in here\n\n\n\n');
+	console.log(`\n\n\n\n ${process.env['AGENT_BUILDDIRECTORY']}\n\n\n\n`);
 	const buildDir = process.env['AGENT_BUILDDIRECTORY'];
 	const arch = process.env['VSCODE_ARCH'];
 
@@ -20,6 +22,8 @@ async function main() {
 	const appName = product.nameLong + '.app';
 	const x64AppPath = path.join(buildDir, 'VSCode-darwin-x64', appName);
 	const arm64AppPath = path.join(buildDir, 'VSCode-darwin-arm64', appName);
+
+	console.log('\n\n\n\n\n\n\narm path: ' + arm64AppPath + '\n\n\n\n\n\n\n');
 	const x64AsarPath = path.join(x64AppPath, 'Contents', 'Resources', 'app', 'node_modules.asar');
 	const arm64AsarPath = path.join(arm64AppPath, 'Contents', 'Resources', 'app', 'node_modules.asar');
 	const outAppPath = path.join(buildDir, `VSCode-darwin-${arch}`, appName);
