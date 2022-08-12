@@ -749,17 +749,12 @@ export class GettingStartedPage extends EditorPane {
 			onShowOnStartupChanged();
 		}));
 
-		// const welcomeMessages = ['yeet', 'rip wagmi', 'woooooo', 'everything reminds me of her (wagmi)', 'Edallina edition'];
-		// const randomIndex = Math.floor(Math.random() * welcomeMessages.length);
-
-		// const header = $('.header', {},
-		// 	$('h1.product-name.caption', {}, this.productService.nameShort),
-		// 	$('p.subtitle.description', {}, localize({ key: 'gettingStarted.editingEvolved', comment: ['Shown as subtitle on the Welcome page.'] }, `${welcomeMessages[randomIndex]}`))
-		// );
+		const welcomeMessages = ['yeet', 'rip wagmi', 'woooooo', 'everything reminds me of her (wagmi)', 'Edallina edition'];
+		const randomIndex = Math.floor(Math.random() * welcomeMessages.length);
 
 		const header = $('.header', {},
-			$('h1.product-name.caption', {}, this.productService.nameLong),
-			$('p.subtitle.description', {}, localize({ key: 'gettingStarted.editingEvolved', comment: ['Shown as subtitle on the Welcome page.'] }, "Testing! It worked!!!!"))
+			$('h1.product-name.caption', {}, this.productService.nameShort),
+			$('p.subtitle.description', {}, localize({ key: 'gettingStarted.editingEvolved', comment: ['Shown as subtitle on the Welcome page.'] }, "{0}", welcomeMessages[randomIndex]))
 		);
 
 		const leftColumn = $('.categories-column.categories-column-left', {},);
